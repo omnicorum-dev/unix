@@ -2,8 +2,11 @@
 
 echo $SHELL
 
-source aligno_scripts/build-essentials.sh
-source aligno_scripts/system-resources.sh
-source aligno_scripts/python.sh
-sudo aligno_scripts/zsh-setup.sh
+SCRIPTS="aligno_scripts"
+
+source $SCRIPTS/build-essentials.sh
+source $SCRIPTS/system-resources.sh
+source $SCRIPTS/python.sh
+sudo $SCRIPTS/create-users.sh 
+sudo $SCRIPTS/zsh-setup.sh
 

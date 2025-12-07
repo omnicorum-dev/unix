@@ -1,0 +1,25 @@
+alias bat='batcat'
+alias fd='fdfind'
+
+export ZSH=/usr/share/oh-my-zsh
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+plugins=(
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+unalias ls 2>/dev/null
+unset -f ls 2>/dev/null
+alias ls="eza --long --icons --no-permissions --no-user --no-filesize --no-time --group-directories-first --classify"
+alias ll="eza -la --icons --group-directories-first --classify"
+alias lt="eza --tree --level=2 --icons"
+
+clear
+neofetch
+

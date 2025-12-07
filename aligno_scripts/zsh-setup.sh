@@ -67,25 +67,11 @@ echo Creating default .zshrc for all users
 DEFAULT_ZSHRC="/etc/zsh/zshrc"
 DEFAULT_P10k="/etc/zsh/p10k.zsh"
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
-cp "$SCRIPT_DIR/p10k.zsh" $DEFAULT_P10k
+
 mkdir -p /etc/zsh
 
-cat << 'EOF' > "$DEFAULT_ZSHRC"
-alias bat='batcat'
-export ZSH=/usr/share/oh-my-zsh
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-plugins=(
-	git
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-EOF
+cp "$SCRIPT_DIR/p10k.zsh" $DEFAULT_P10k
+cp "$SCRIPT_DIR/zshrc" $DEFAULT_ZSHRC
 
 echo Applying default .zshrc to existing users
 for home in /home/*; do
