@@ -4,7 +4,7 @@ mkdir -p /etc/tmux
 mkdir -p /etc/tmux-plugins
 
 #git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-git clone https://github.com/tmux-plugins/tpm /etc/tmux-plugins/tpm
+#git clone https://github.com/tmux-plugins/tpm /etc/tmux-plugins/tpm
 
 DEFAULT_TCONF="/etc/tmux/tmux.conf"
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
