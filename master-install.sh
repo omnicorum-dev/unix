@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo $SHELL
+echo "$SHELL"
 
 SCRIPTS="aligno_scripts"
 
@@ -11,3 +11,5 @@ sudo $SCRIPTS/create-users.sh
 sudo $SCRIPTS/neovim-setup.sh
 sudo $SCRIPTS/zsh-setup.sh
 source $SCRIPTS/start-ssh.sh
+
+source "post-install-instructions.sh"
