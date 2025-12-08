@@ -9,6 +9,8 @@ git clone https://github.com/tmux-plugins/tpm /etc/tmux-plugins/tpm
 DEFAULT_TCONF="/etc/tmux/tmux.conf"
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
 
+cp "$SCRIPT_DIR/tmux.conf" $DEFAULT_TCONF
+
 echo "Applying default .tmux.conf to all users"
 
 for home in /home/*; do
