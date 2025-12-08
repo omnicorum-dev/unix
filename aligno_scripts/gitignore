@@ -1,0 +1,11 @@
+# Ignore the 'data' symlink in the root
+/data
+
+# Ignore all Python virtual environments named 'env' anywhere
+**/env/
+
+# common Python ignores for caching and object files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

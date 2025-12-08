@@ -5,3 +5,4 @@ yes | sudo apt install python3-pip
 yes | sudo apt install python3-venv
 yes | sudo apt install python3-dev
 
+yes | sudo apt install jupyter-notebook
